@@ -1,0 +1,2033 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Outsourced CFO offers founders financial management services including CFO Services, Cloud Accounting, Automation Services & Talent Solutions. Building a world-class finance function for your growing company."
+    />
+    <meta name="theme-color" content="#0B1E3F" />
+    <title>
+      Outsourced CFO — A World-Class Finance Function for Growing Companies
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ---------- Design tokens ---------- */
+      :root {
+        --navy-900: #0b1e3f;
+        --navy-800: #122a55;
+        --navy-700: #1c3a72;
+        --gold-500: #c9a961;
+        --gold-600: #b5944c;
+        --gold-700: #806023; /* AA-compliant on cream backgrounds */
+        --gold-100: #f5ebd3;
+        --ink-900: #111827;
+        --ink-700: #374151;
+        --ink-500: #6b7280;
+        --ink-300: #d1d5db;
+        --bg: #fafaf7;
+        --surface: #ffffff;
+        --line: #e8e6df;
+        --success: #0f7b5b;
+        --danger: #b3261e;
+
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --shadow-sm: 0 1px 2px rgba(11, 30, 63, 0.06);
+        --shadow-md: 0 8px 24px rgba(11, 30, 63, 0.08);
+        --shadow-lg: 0 20px 50px rgba(11, 30, 63, 0.15);
+
+        --container: 1160px;
+        --gutter: 24px;
+
+        --font-sans:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+      }
+
+      /* ---------- Reset / base ---------- */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: var(--font-sans);
+        background: var(--bg);
+        color: var(--ink-900);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      img,
+      svg {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font-family: inherit;
+        cursor: pointer;
+      }
+      ::selection {
+        background: var(--gold-500);
+        color: var(--navy-900);
+      }
+
+      /* ---------- Layout helpers ---------- */
+      .container {
+        width: 100%;
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 0 var(--gutter);
+      }
+      section {
+        padding: 88px 0;
+      }
+      @media (max-width: 768px) {
+        section {
+          padding: 56px 0;
+        }
+      }
+
+      /* ---------- Typography ---------- */
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-serif);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+        margin: 0 0 16px;
+        color: var(--navy-900);
+      }
+      h1 {
+        font-size: clamp(2.2rem, 5vw, 3.6rem);
+      }
+      h2 {
+        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      }
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      p {
+        margin: 0 0 16px;
+        color: var(--ink-700);
+      }
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--gold-700);
+        margin-bottom: 14px;
+        font-family: var(--font-sans);
+      }
+      .lead {
+        font-size: 1.125rem;
+        color: var(--ink-700);
+        max-width: 640px;
+      }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 26px;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.98rem;
+        border: 1px solid transparent;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease,
+          color 0.2s ease,
+          border-color 0.2s ease;
+        white-space: nowrap;
+      }
+      .btn-primary {
+        background: var(--gold-500);
+        color: var(--navy-900);
+        box-shadow: var(--shadow-sm);
+      }
+      .btn-primary:hover {
+        background: var(--gold-600);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--navy-900);
+        border-color: var(--ink-300);
+      }
+      .btn-ghost:hover {
+        border-color: var(--navy-900);
+      }
+      .btn-lg {
+        padding: 18px 32px;
+        font-size: 1.05rem;
+      }
+      .btn .arrow {
+        transition: transform 0.2s ease;
+      }
+      .btn:hover .arrow {
+        transform: translateX(3px);
+      }
+
+      /* ---------- Nav ---------- */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(250, 250, 247, 0.85);
+        backdrop-filter: saturate(180%) blur(12px);
+        -webkit-backdrop-filter: saturate(180%) blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: var(--navy-900);
+        letter-spacing: -0.01em;
+      }
+      .logo-mark {
+        width: 32px;
+        height: 32px;
+        background: var(--navy-900);
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        color: var(--gold-500);
+        font-weight: 800;
+        font-family: var(--font-sans);
+        font-size: 0.95rem;
+      }
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links a {
+        font-size: 0.94rem;
+        font-weight: 500;
+        color: var(--ink-700);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--navy-900);
+      }
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        color: var(--navy-900);
+      }
+
+      @media (max-width: 980px) {
+        .nav-links,
+        .nav-cta .btn {
+          display: none;
+        }
+        .menu-toggle {
+          display: inline-flex;
+        }
+        .nav.open .nav-links {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          background: var(--surface);
+          border-bottom: 1px solid var(--line);
+          padding: 8px 0;
+          box-shadow: var(--shadow-md);
+        }
+        .nav.open .nav-links a {
+          padding: 14px var(--gutter);
+          border-top: 1px solid var(--line);
+        }
+        .nav.open .nav-cta .btn {
+          display: inline-flex;
+          margin: 12px var(--gutter);
+        }
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        padding: 88px 0 72px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -180px;
+        right: -180px;
+        width: 520px;
+        height: 520px;
+        background: radial-gradient(
+          circle,
+          rgba(201, 169, 97, 0.18),
+          transparent 70%
+        );
+        z-index: 0;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        gap: 64px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .hero h1 .accent {
+        color: var(--gold-600);
+        font-style: italic;
+      }
+      .hero p.lead {
+        font-size: 1.18rem;
+        margin-bottom: 28px;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .hero-trust {
+        margin-top: 28px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 0.9rem;
+        color: var(--ink-500);
+      }
+      .stars {
+        color: var(--gold-500);
+        letter-spacing: 2px;
+      }
+
+      /* Hero visual */
+      .hero-visual {
+        position: relative;
+        aspect-ratio: 4/5;
+        max-width: 460px;
+        margin-left: auto;
+      }
+      .dash-card {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        padding: 24px;
+        border: 1px solid var(--line);
+      }
+      .dash-main {
+        position: relative;
+        z-index: 2;
+      }
+      .dash-float {
+        position: absolute;
+        z-index: 3;
+        padding: 16px 20px;
+        background: var(--navy-900);
+        color: #fff;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        bottom: -20px;
+        left: -30px;
+        max-width: 240px;
+      }
+      .dash-float .pill {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--gold-500);
+        color: var(--navy-900);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .dash-float small {
+        color: rgba(255, 255, 255, 0.65);
+        display: block;
+        font-size: 0.75rem;
+      }
+      .dash-float strong {
+        font-size: 0.98rem;
+      }
+      .dash-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .dash-row:last-child {
+        border-bottom: 0;
+      }
+      .dash-row .label {
+        color: var(--ink-500);
+        font-size: 0.86rem;
+      }
+      .dash-row .val {
+        font-weight: 700;
+        color: var(--navy-900);
+        font-size: 1.05rem;
+      }
+      .dash-row .delta-up {
+        color: var(--success);
+        font-size: 0.8rem;
+        margin-left: 6px;
+        font-weight: 600;
+      }
+      .dash-row .delta-down {
+        color: var(--danger);
+        font-size: 0.8rem;
+        margin-left: 6px;
+        font-weight: 600;
+      }
+      .dash-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+      .dash-title h4 {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: 0.95rem;
+        color: var(--navy-900);
+        font-weight: 700;
+      }
+      .dash-title .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--success);
+        display: inline-block;
+        margin-right: 6px;
+      }
+      .dash-chart {
+        margin-top: 8px;
+        height: 90px;
+        background: linear-gradient(
+          180deg,
+          rgba(201, 169, 97, 0.18),
+          transparent
+        );
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+      }
+      .dash-chart svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+        .hero-visual {
+          margin: 0 auto;
+          max-width: 380px;
+        }
+        .dash-float {
+          left: 0;
+        }
+      }
+
+      /* ---------- Featured-on strip ---------- */
+      .featured {
+        padding: 32px 0;
+        background: var(--surface);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .featured-label {
+        text-align: center;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--ink-500);
+        margin-bottom: 18px;
+        font-weight: 600;
+      }
+      .logo-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 36px 56px;
+      }
+      .logo-row .pub {
+        font-family: var(--font-serif);
+        font-style: italic;
+        color: var(--ink-500);
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        opacity: 0.75;
+        transition:
+          opacity 0.2s,
+          color 0.2s;
+      }
+      .logo-row .pub:hover {
+        opacity: 1;
+        color: var(--navy-900);
+      }
+
+      /* ---------- Trust bar / stats ---------- */
+      .trust-bar {
+        padding: 48px 0;
+        background: var(--navy-900);
+        color: #fff;
+      }
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        text-align: center;
+      }
+      .trust-grid .stat-num {
+        font-family: var(--font-serif);
+        font-size: 2.4rem;
+        color: var(--gold-500);
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .trust-grid .stat-label {
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.78);
+        letter-spacing: 0.02em;
+        line-height: 1.4;
+      }
+      @media (max-width: 700px) {
+        .trust-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 28px;
+        }
+        .trust-grid .stat-num {
+          font-size: 1.9rem;
+        }
+      }
+
+      /* ---------- Problem section ---------- */
+      .problem {
+        background: var(--surface);
+      }
+      .problem-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+      .problem-list {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0 0;
+      }
+      .problem-list li {
+        padding: 14px 0 14px 36px;
+        border-top: 1px solid var(--line);
+        position: relative;
+        color: var(--ink-700);
+        font-size: 1.02rem;
+      }
+      .problem-list li:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .problem-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 19px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: var(--gold-100);
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23806023'><path d='M10 1a9 9 0 100 18 9 9 0 000-18zm-1 13l-4-4 1.4-1.4L9 11.2l5.6-5.6L16 7l-7 7z'/></svg>");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      @media (max-width: 880px) {
+        .problem-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+
+      /* ---------- Services ---------- */
+      .services {
+        background: var(--bg);
+      }
+      .section-head {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto 48px;
+      }
+      .section-head .lead {
+        margin: 0 auto;
+      }
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .service-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 28px 24px;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+        display: flex;
+        flex-direction: column;
+      }
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--gold-500);
+      }
+      .service-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--navy-900);
+        color: var(--gold-500);
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 18px;
+      }
+      .service-card h3 {
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
+      .service-card p {
+        font-size: 0.94rem;
+        margin: 0 0 16px;
+        color: var(--ink-700);
+        flex: 1;
+      }
+      .service-card .learn {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--gold-700);
+        margin-top: auto;
+      }
+      .service-card .learn .arrow {
+        transition: transform 0.2s ease;
+        display: inline-block;
+      }
+      .service-card:hover .learn .arrow {
+        transform: translateX(3px);
+      }
+      @media (max-width: 1000px) {
+        .service-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---------- Industries ---------- */
+      .industries {
+        background: var(--surface);
+      }
+      .industry-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+      .industry-chip {
+        padding: 18px 16px;
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.92rem;
+        color: var(--ink-700);
+        font-weight: 500;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .industry-chip:hover {
+        border-color: var(--gold-500);
+        background: var(--surface);
+      }
+      .industry-chip .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--gold-500);
+        flex-shrink: 0;
+      }
+      @media (max-width: 880px) {
+        .industry-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        .industry-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---------- Process ---------- */
+      .process {
+        background: var(--bg);
+      }
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        counter-reset: step;
+      }
+      .step {
+        position: relative;
+        padding: 32px 24px 24px;
+      }
+      .step::before {
+        counter-increment: step;
+        content: counter(step, decimal-leading-zero);
+        font-family: var(--font-serif);
+        font-size: 3rem;
+        color: var(--gold-600);
+        line-height: 1;
+        margin-bottom: 12px;
+        display: block;
+        opacity: 0.95;
+      }
+      .step h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+      }
+      .step p {
+        margin: 0;
+        font-size: 0.96rem;
+      }
+      @media (max-width: 880px) {
+        .process-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+
+      /* ---------- Testimonials ---------- */
+      .testimonials {
+        background: var(--navy-900);
+        color: #fff;
+      }
+      .testimonials .section-head h2,
+      .testimonials .section-head .eyebrow {
+        color: #fff;
+      }
+      .testimonials .section-head .eyebrow {
+        color: var(--gold-500);
+      }
+      .testimonials .section-head p {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .quote-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .quote-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 28px;
+        border-radius: var(--radius-lg);
+        display: flex;
+        flex-direction: column;
+      }
+      .quote-card .stars {
+        margin-bottom: 14px;
+        font-size: 0.95rem;
+      }
+      .quote-card blockquote {
+        margin: 0 0 22px;
+        font-family: var(--font-serif);
+        font-size: 1.02rem;
+        line-height: 1.55;
+        color: #fff;
+        font-style: italic;
+        flex: 1;
+      }
+      .quote-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 16px;
+      }
+      .quote-author .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--gold-500);
+        color: var(--navy-900);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .quote-author .meta strong {
+        color: #fff;
+        font-size: 0.95rem;
+        display: block;
+        line-height: 1.2;
+      }
+      .quote-author .meta small {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.82rem;
+      }
+      @media (max-width: 900px) {
+        .quote-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---------- FAQ ---------- */
+      .faq {
+        background: var(--bg);
+      }
+      .faq-grid {
+        max-width: 820px;
+        margin: 0 auto;
+      }
+      .faq-item {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        margin-bottom: 12px;
+        overflow: hidden;
+      }
+      .faq-item summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 20px 24px;
+        font-weight: 600;
+        color: var(--navy-900);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        font-size: 1.02rem;
+      }
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-item summary::after {
+        content: "+";
+        color: var(--gold-700);
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+      .faq-item[open] summary::after {
+        content: "−";
+      }
+      .faq-item .faq-body {
+        padding: 0 24px 22px;
+        color: var(--ink-700);
+        font-size: 0.98rem;
+        line-height: 1.65;
+      }
+
+      /* ---------- Lead form / final CTA ---------- */
+      .cta-section {
+        background: linear-gradient(
+          135deg,
+          var(--navy-900) 0%,
+          var(--navy-800) 100%
+        );
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(
+          circle,
+          rgba(201, 169, 97, 0.2),
+          transparent 70%
+        );
+      }
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        bottom: -120px;
+        right: -120px;
+        width: 360px;
+        height: 360px;
+        background: radial-gradient(
+          circle,
+          rgba(201, 169, 97, 0.12),
+          transparent 70%
+        );
+      }
+      .cta-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 64px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .cta-text h2 {
+        color: #fff;
+      }
+      .cta-text p {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 1.08rem;
+      }
+      .cta-text .eyebrow {
+        color: var(--gold-500);
+      }
+      .cta-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 22px 0 0;
+      }
+      .cta-bullets li {
+        padding: 8px 0 8px 30px;
+        position: relative;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.98rem;
+      }
+      .cta-bullets li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        color: var(--gold-500);
+        font-weight: 700;
+      }
+      .form-card {
+        background: var(--surface);
+        color: var(--ink-900);
+        padding: 36px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+      }
+      .form-card h3 {
+        margin: 0 0 6px;
+        font-size: 1.35rem;
+        font-family: var(--font-serif);
+        font-weight: 600;
+      }
+      .form-card .form-sub {
+        color: var(--ink-500);
+        font-size: 0.92rem;
+        margin: 0 0 24px;
+      }
+      .field {
+        margin-bottom: 16px;
+      }
+      .field label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--ink-700);
+        margin-bottom: 6px;
+      }
+      .field input,
+      .field select {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid var(--ink-300);
+        border-radius: var(--radius-sm);
+        font-size: 1rem;
+        font-family: inherit;
+        background: var(--surface);
+        color: var(--ink-900);
+        transition:
+          border-color 0.15s,
+          box-shadow 0.15s;
+      }
+      .field input:focus,
+      .field select:focus {
+        outline: none;
+        border-color: var(--navy-900);
+        box-shadow: 0 0 0 3px rgba(11, 30, 63, 0.1);
+      }
+      .field.error input,
+      .field.error select {
+        border-color: var(--danger);
+      }
+      .field .err-msg {
+        color: var(--danger);
+        font-size: 0.82rem;
+        margin-top: 4px;
+        display: none;
+      }
+      .field.error .err-msg {
+        display: block;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .form-submit {
+        width: 100%;
+        margin-top: 8px;
+      }
+      .form-foot {
+        font-size: 0.8rem;
+        color: var(--ink-500);
+        text-align: center;
+        margin-top: 14px;
+      }
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .form-success.show {
+        display: block;
+      }
+      .form-success .check {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 14px;
+        border-radius: 50%;
+        background: var(--gold-100);
+        color: var(--success);
+        display: grid;
+        place-items: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+      .form-success h3 {
+        color: var(--navy-900);
+        margin-bottom: 8px;
+      }
+      .form-success p {
+        color: var(--ink-700);
+        margin: 0;
+      }
+
+      @media (max-width: 980px) {
+        .cta-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        .form-card {
+          padding: 28px 22px;
+        }
+      }
+
+      /* ---------- Footer ---------- */
+      footer {
+        background: var(--navy-900);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 56px 0 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 36px;
+      }
+      footer h5 {
+        color: #fff;
+        font-size: 0.88rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin: 0 0 14px;
+      }
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      footer ul li {
+        margin-bottom: 8px;
+      }
+      footer ul li a,
+      footer ul li {
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.65);
+        transition: color 0.15s;
+      }
+      footer ul li a:hover {
+        color: var(--gold-500);
+      }
+      footer .brand p {
+        margin: 12px 0 0;
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.6);
+        max-width: 280px;
+      }
+      footer .brand .logo {
+        color: #fff;
+      }
+      .legal {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.5);
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .legal a {
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .legal a:hover {
+        color: var(--gold-500);
+      }
+      @media (max-width: 720px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 28px;
+        }
+        .footer-grid .brand {
+          grid-column: 1 / -1;
+        }
+      }
+
+      /* ---------- Utilities ---------- */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============= NAV ============= -->
+    <header class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="#top" class="logo" aria-label="Outsourced CFO home">
+          <span class="logo-mark">O</span>
+          <span
+            >Outsourced<strong style="color: var(--gold-700)">CFO</strong></span
+          >
+        </a>
+
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#services">CFO Services</a></li>
+            <li><a href="#services">Cloud Accounting</a></li>
+            <li><a href="#services">Automation</a></li>
+            <li><a href="#services">Talent Solutions</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ============= HERO ============= -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Strategic Finance for Founders</div>
+            <h1>
+              Building a world-class finance function
+              <span class="accent">for your growing company.</span>
+            </h1>
+            <p class="lead">
+              Scaling up is complex. Simplify it with CFO services, cloud
+              accounting, automation and finance talent — delivered by a team
+              that has helped hundreds of founders across 34+ countries scale
+              with confidence.
+            </p>
+            <div class="hero-ctas">
+              <a href="#contact" class="btn btn-primary btn-lg"
+                >Get in Touch <span class="arrow">→</span></a
+              >
+              <a href="#services" class="btn btn-ghost btn-lg"
+                >Explore Services</a
+              >
+            </div>
+            <div class="hero-trust">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span
+                >Trusted by founders in over
+                <strong style="color: var(--navy-900)"
+                  >34 countries</strong
+                ></span
+              >
+            </div>
+          </div>
+
+          <!-- Hero visual: stylized financial dashboard mockup -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="dash-card dash-main">
+              <div class="dash-title">
+                <h4><span class="dot"></span>Monthly Financial Snapshot</h4>
+                <span style="font-size: 0.78rem; color: var(--ink-500)"
+                  >May 2026</span
+                >
+              </div>
+              <div class="dash-chart">
+                <svg viewBox="0 0 300 90" preserveAspectRatio="none">
+                  <path
+                    d="M0,70 C40,60 60,55 90,45 C120,38 150,35 180,28 C210,22 240,18 300,8 L300,90 L0,90 Z"
+                    fill="rgba(201,169,97,0.25)"
+                  />
+                  <path
+                    d="M0,70 C40,60 60,55 90,45 C120,38 150,35 180,28 C210,22 240,18 300,8"
+                    fill="none"
+                    stroke="#B5944C"
+                    stroke-width="2.5"
+                  />
+                </svg>
+              </div>
+              <div class="dash-row">
+                <span class="label">Cash Runway</span>
+                <span class="val"
+                  >18.4 mo <span class="delta-up">▲ 3.1</span></span
+                >
+              </div>
+              <div class="dash-row">
+                <span class="label">Gross Margin</span>
+                <span class="val"
+                  >62.3% <span class="delta-up">▲ 4.2%</span></span
+                >
+              </div>
+              <div class="dash-row">
+                <span class="label">Burn Rate</span>
+                <span class="val"
+                  >$84.2K <span class="delta-down">▼ 12%</span></span
+                >
+              </div>
+              <div class="dash-row">
+                <span class="label">EBITDA</span>
+                <span class="val"
+                  >$312K <span class="delta-up">▲ 18%</span></span
+                >
+              </div>
+            </div>
+            <div class="dash-float">
+              <div class="pill">$</div>
+              <div>
+                <small>Capital raised with founders</small>
+                <strong>$100M+</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= FEATURED ON ============= -->
+      <section class="featured" aria-label="Featured in publications">
+        <div class="container">
+          <div class="featured-label">As Featured In</div>
+          <div class="logo-row">
+            <span class="pub">Forbes</span>
+            <span class="pub">Entrepreneur</span>
+            <span class="pub">Fast Company</span>
+            <span class="pub">Ventureburn</span>
+            <span class="pub">Bizcommunity</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= STATS BAR ============= -->
+      <section class="trust-bar" id="results" aria-label="Results">
+        <div class="container">
+          <div class="trust-grid">
+            <div>
+              <div class="stat-num">20+</div>
+              <div class="stat-label">Industries Served</div>
+            </div>
+            <div>
+              <div class="stat-num">Hundreds</div>
+              <div class="stat-label">of Founders &amp; Companies</div>
+            </div>
+            <div>
+              <div class="stat-num">$100M+</div>
+              <div class="stat-label">Growth Finance Raised</div>
+            </div>
+            <div>
+              <div class="stat-num">34+</div>
+              <div class="stat-label">Countries Served</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= PROBLEM ============= -->
+      <section class="problem">
+        <div class="container problem-grid">
+          <div>
+            <div class="eyebrow">Sound familiar?</div>
+            <h2>
+              Scaling up is complex. You shouldn't have to navigate it alone.
+            </h2>
+            <p class="lead">
+              Entrepreneurs change the world — they create growth, jobs and
+              impact. But as your company scales, finance gets harder, faster
+              than the team can keep up. That's where we come in.
+            </p>
+          </div>
+          <ul class="problem-list">
+            <li>
+              You've outgrown your bookkeeper but a full-time CFO isn't yet in
+              budget.
+            </li>
+            <li>
+              You need investor-ready forecasts, board packs, or capital raising
+              support.
+            </li>
+            <li>
+              Your tech stack is fragmented and your team is drowning in manual
+              workflows.
+            </li>
+            <li>
+              You're missing finance talent for a specific project, transition,
+              or growth phase.
+            </li>
+            <li>
+              You want peace of mind that the numbers behind every decision are
+              right.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============= SERVICES ============= -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Services</div>
+            <h2>Four pillars of financial management.</h2>
+            <p class="lead">
+              We offer founders innovative financial insight, world-class
+              financial technology and total peace of mind.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M3 3v18h18" />
+                  <path d="M7 14l4-4 4 4 5-7" />
+                </svg>
+              </div>
+              <h3>CFO Services</h3>
+              <p>
+                The highly qualified finance expert you've always wanted on your
+                advisory panel — forecasting, fundraising, board reporting and
+                strategic decision support.
+              </p>
+              <span class="learn">Learn more <span class="arrow">→</span></span>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" />
+                </svg>
+              </div>
+              <h3>Cloud Accounting</h3>
+              <p>
+                An innovative accounting team to make sure bookkeeping,
+                reporting, tax and payroll are done right — powered by Xero and
+                a modern cloud tech stack.
+              </p>
+              <span class="learn">Learn more <span class="arrow">→</span></span>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33h0a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v0a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"
+                  />
+                </svg>
+              </div>
+              <h3>Automation Services</h3>
+              <p>
+                Make running your company a breeze. We streamline operations and
+                integrate leading cloud systems — Zoho, Zapier, Xero, Unleashed,
+                Shopify and more.
+              </p>
+              <span class="learn">Learn more <span class="arrow">→</span></span>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
+              <h3>Talent Solutions</h3>
+              <p>
+                Interim and permanent finance talent to support your team
+                through growth, transition or key projects — matched personally
+                to your company's needs.
+              </p>
+              <span class="learn">Learn more <span class="arrow">→</span></span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= INDUSTRIES ============= -->
+      <section class="industries" id="industries">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Focus Areas</div>
+            <h2>Specialized industry experience.</h2>
+            <p class="lead">
+              Our team can assist companies in any industry or phase of
+              development. We have particular depth with high-growth companies
+              in these arenas.
+            </p>
+          </div>
+
+          <div class="industry-grid">
+            <div class="industry-chip">
+              <span class="dot"></span>Software &amp; SaaS
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Financial Services &amp; Fintech
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Medical Technology &amp; Healthcare
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Manufacturing &amp; E-Commerce
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Creative Industries &amp; Agencies
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Venture Capital &amp; Accelerators
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Professional &amp; Commercial Services
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Education &amp; EdTech
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Telecommunications
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Blockchain &amp; Crypto
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Disruptive Tech &amp; Startups
+            </div>
+            <div class="industry-chip">
+              <span class="dot"></span>Green Energy &amp; Impact Ventures
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= PROCESS ============= -->
+      <section class="process" id="process">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">How it works</div>
+            <h2>A finance partner, matched to you.</h2>
+            <p class="lead">
+              Business is about people. We personally match a finance
+              professional or team to your company — with the right mix of
+              knowledge, skills and experience.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <div class="step">
+              <h3>Discovery Call</h3>
+              <p>
+                Jump on a call with our team to talk through your business, your
+                current finance setup, and what "world-class" looks like for
+                you.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Tailored Engagement</h3>
+              <p>
+                We propose the right mix of CFO, accounting, automation and
+                talent — scoped to your stage, sector and goals, with
+                predictable monthly pricing.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Scale With Confidence</h3>
+              <p>
+                Your dedicated finance team gets to work — implementing systems,
+                running the numbers, and partnering with you on every major
+                decision.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= TESTIMONIALS ============= -->
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Testimonials</div>
+            <h2>What founders say.</h2>
+            <p class="lead">
+              Hundreds of founders and management teams tap into the expertise
+              of their trusted finance partner to scale their companies. Your
+              success story is our success story.
+            </p>
+          </div>
+
+          <div class="quote-grid">
+            <article class="quote-card">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>
+                We have gained insight into our new business and were able to
+                implement best of breed systems combined with best practice
+                processes. They have shown sincere interest and care towards our
+                firm — a great deal of trust has been established for years of
+                collaboration to come.
+              </blockquote>
+              <div class="quote-author">
+                <span class="avatar" aria-hidden="true">TM</span>
+                <div class="meta">
+                  <strong>Tim Molteno</strong>
+                  <small>Founder, Intembeko Investment Administrators</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="quote-card">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>
+                Would we recommend Outsourced CFO? Yes! They have just gone from
+                strength to strength and are absolutely nailing it out there.
+                All founders need a go-to finance expert.
+              </blockquote>
+              <div class="quote-author">
+                <span class="avatar" aria-hidden="true">YW</span>
+                <div class="meta">
+                  <strong>Yvonne Wakefield</strong>
+                  <small>Founder, Caveat Legal</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="quote-card">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>
+                We moved over to Outsourced CFO from a small bookkeeping company
+                as we started to scale. They brought in great cloud technology,
+                predictable costs and on-point strategic input. We now have
+                total peace of mind around our financial function.
+              </blockquote>
+              <div class="quote-author">
+                <span class="avatar" aria-hidden="true">AC</span>
+                <div class="meta">
+                  <strong>Aidan Casserly</strong>
+                  <small>Founder, Castle Rock Managed IT Services</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= FAQ ============= -->
+      <section class="faq" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">FAQs</div>
+            <h2>Everything you need to know.</h2>
+          </div>
+
+          <div class="faq-grid">
+            <details class="faq-item" open>
+              <summary>What services does Outsourced CFO offer?</summary>
+              <div class="faq-body">
+                Four pillars: <strong>CFO Services</strong> (strategic finance,
+                forecasting, board reporting, capital raising and business
+                valuations), <strong>Cloud Accounting</strong> (bookkeeping,
+                tax, payroll, VAT, IFRS),
+                <strong>Automation Services</strong> (Zoho, Xero, Zapier and
+                tech-stack integration), and
+                <strong>Talent Solutions</strong> (interim and permanent finance
+                hires).
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Who do you work with?</summary>
+              <div class="faq-body">
+                Founders and growing companies — from startups to listed
+                businesses — across 34+ countries and more than 20 industries,
+                including SaaS, fintech, medtech, e-commerce, manufacturing,
+                professional services, creative agencies, venture capital and
+                impact ventures.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                How is this different from a bookkeeper or accountant?
+              </summary>
+              <div class="faq-body">
+                A bookkeeper records what happened. An accountant files taxes on
+                it. An Outsourced CFO uses that data to tell you what to do next
+                — pricing, hiring, fundraising, investment. We can work
+                alongside your existing accountants or fully replace the
+                function, depending on what you need.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What cloud systems do you work with?</summary>
+              <div class="faq-body">
+                We're certified advisors and implementation partners for a
+                leading cloud tech stack including Xero, Zoho One, Zapier,
+                Unleashed, Dext, Shopify, Vend, Spotlight and SimplePay — so we
+                can meet you where you are or recommend the right setup for
+                where you're going.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How do you get started with a new client?</summary>
+              <div class="faq-body">
+                Get in touch and jump on a call with our team. We'll talk
+                through your business and current finance setup, then propose a
+                tailored engagement — the right mix of CFO, accounting,
+                automation and talent for your stage and goals.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Where are you based?</summary>
+              <div class="faq-body">
+                Our US office is at 260 Madison Avenue, New York City, NY 10016.
+                We serve founders and management teams across 34+ countries,
+                with dedicated teams matched to each client.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= FINAL CTA / FORM ============= -->
+      <section class="cta-section" id="contact">
+        <div class="container cta-grid">
+          <div class="cta-text">
+            <div class="eyebrow">Get in Touch</div>
+            <h2>Have any questions? Let's chat.</h2>
+            <p>
+              We love meeting founders and executives. Jump on a call with our
+              team to answer any questions you may have — about CFO services,
+              cloud accounting, automation or finance talent.
+            </p>
+            <ul class="cta-bullets">
+              <li>A real conversation with a senior finance professional</li>
+              <li>
+                An honest view of where your finance function stands today
+              </li>
+              <li>A tailored proposal — only if it's the right fit</li>
+              <li>Response within one business day</li>
+            </ul>
+            <p
+              style="
+                margin-top: 28px;
+                font-size: 0.95rem;
+                color: rgba(255, 255, 255, 0.7);
+              "
+            >
+              Prefer email or phone?<br />
+              <a
+                href="mailto:info@ocfo.com"
+                style="color: var(--gold-500); font-weight: 600"
+                >info@ocfo.com</a
+              >
+              &nbsp;·&nbsp;
+              <a
+                href="tel:+19292519291"
+                style="color: var(--gold-500); font-weight: 600"
+                >+1 929 251 9291</a
+              >
+            </p>
+          </div>
+
+          <div class="form-card">
+            <form id="leadForm" novalidate>
+              <h3>Request a call</h3>
+              <p class="form-sub">
+                A senior team member will be in touch within one business day.
+              </p>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="firstName">First name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    autocomplete="given-name"
+                    required
+                  />
+                  <div class="err-msg">Please enter your first name.</div>
+                </div>
+                <div class="field">
+                  <label for="lastName">Last name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    autocomplete="family-name"
+                    required
+                  />
+                  <div class="err-msg">Please enter your last name.</div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="email">Work email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+                <div class="err-msg">Please enter a valid email address.</div>
+              </div>
+
+              <div class="field">
+                <label for="company">Company</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  autocomplete="organization"
+                  required
+                />
+                <div class="err-msg">Please enter your company name.</div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="service">I'm interested in</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select…</option>
+                    <option value="cfo">CFO Services</option>
+                    <option value="accounting">Cloud Accounting</option>
+                    <option value="automation">Automation Services</option>
+                    <option value="talent">Talent Solutions</option>
+                    <option value="multiple">A mix of the above</option>
+                    <option value="unsure">Not sure yet</option>
+                  </select>
+                  <div class="err-msg">Please select an option.</div>
+                </div>
+                <div class="field">
+                  <label for="revenue">Annual revenue</label>
+                  <select id="revenue" name="revenue" required>
+                    <option value="">Select a range…</option>
+                    <option value="under-1m">Under $1M</option>
+                    <option value="1m-5m">$1M – $5M</option>
+                    <option value="5m-15m">$5M – $15M</option>
+                    <option value="15m-50m">$15M – $50M</option>
+                    <option value="50m-plus">$50M+</option>
+                  </select>
+                  <div class="err-msg">Please select a revenue range.</div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg form-submit">
+                Request My Call <span class="arrow">→</span>
+              </button>
+              <p class="form-foot">
+                We respect your privacy. Your information is never shared.
+              </p>
+            </form>
+
+            <div
+              class="form-success"
+              id="formSuccess"
+              role="status"
+              aria-live="polite"
+            >
+              <div class="check" aria-hidden="true">✓</div>
+              <h3>Thanks — we're on it.</h3>
+              <p>
+                A senior member of our team will reach out within one business
+                day to schedule your call.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============= FOOTER ============= -->
+    <footer id="about">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="brand">
+            <div class="logo" style="color: #fff">
+              <span class="logo-mark">O</span>
+              <span
+                >Outsourced<strong style="color: var(--gold-500)"
+                  >CFO</strong
+                ></span
+              >
+            </div>
+            <p>
+              Building a world-class finance function for your growing company.
+            </p>
+            <p style="margin-top: 18px">
+              260 Madison Avenue<br />
+              New York City, NY 10016<br />
+              USA
+            </p>
+            <p style="margin-top: 14px">
+              <a href="mailto:info@ocfo.com" style="color: var(--gold-500)"
+                >info@ocfo.com</a
+              ><br />
+              <a href="tel:+19292519291" style="color: rgba(255, 255, 255, 0.8)"
+                >+1 929 251 9291</a
+              >
+            </p>
+          </div>
+
+          <div>
+            <h5>Services</h5>
+            <ul>
+              <li><a href="#services">CFO Services</a></li>
+              <li><a href="#services">Cloud Accounting</a></li>
+              <li><a href="#services">Automation Services</a></li>
+              <li><a href="#services">Talent Solutions</a></li>
+              <li><a href="#services">Capital Raising</a></li>
+              <li><a href="#services">Business Valuations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#industries">Industries</a></li>
+              <li><a href="#testimonials">Insights</a></li>
+              <li><a href="#testimonials">Case Studies</a></li>
+              <li><a href="#about">Careers</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5>Get Started</h5>
+            <ul>
+              <li><a href="#contact">Book a Call</a></li>
+              <li><a href="mailto:info@ocfo.com">Email Us</a></li>
+              <li><a href="tel:+19292519291">+1 929 251 9291</a></li>
+              <li><a href="#faq">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal">
+          <div>© 2026 Outsourced CFO. All rights reserved.</div>
+          <div>
+            <a href="#">Privacy</a> &nbsp;·&nbsp;
+            <a href="#">Legal</a> &nbsp;·&nbsp; <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const nav = document.getElementById("nav");
+      const toggle = document.getElementById("menuToggle");
+      toggle.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", open);
+      });
+      document.querySelectorAll(".nav-links a, .nav-cta a").forEach((a) => {
+        a.addEventListener("click", () => {
+          nav.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      const form = document.getElementById("leadForm");
+      const success = document.getElementById("formSuccess");
+
+      function setError(field, hasError) {
+        field.closest(".field").classList.toggle("error", hasError);
+      }
+      function validEmail(v) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let firstInvalid = null;
+        const checks = [
+          ["firstName", (v) => v.trim().length > 0],
+          ["lastName", (v) => v.trim().length > 0],
+          ["email", (v) => validEmail(v)],
+          ["company", (v) => v.trim().length > 0],
+          ["service", (v) => v.length > 0],
+          ["revenue", (v) => v.length > 0],
+        ];
+        checks.forEach(([id, test]) => {
+          const el = document.getElementById(id);
+          const ok = test(el.value);
+          setError(el, !ok);
+          if (!ok && !firstInvalid) firstInvalid = el;
+        });
+        if (firstInvalid) {
+          firstInvalid.focus();
+          return;
+        }
+        form.style.display = "none";
+        success.classList.add("show");
+        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+
+      form.querySelectorAll("input, select").forEach((el) => {
+        el.addEventListener("input", () => setError(el, false));
+        el.addEventListener("change", () => setError(el, false));
+      });
+    </script>
+  </body>
+</html>
